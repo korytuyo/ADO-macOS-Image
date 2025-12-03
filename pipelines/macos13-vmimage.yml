@@ -1,0 +1,10 @@
+trigger: none
+
+pool:
+  vmImage: 'macos-13'
+
+steps:
+  - script: |
+      echo "Running on macOS-13 image"
+      sw_vers
+    displayName: 'macOS-13 probe'

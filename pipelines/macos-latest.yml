@@ -1,0 +1,9 @@
+trigger: none
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+  - script: |
+      echo "Control pipeline on macos-latest"
+    displayName: 'Baseline pipeline'

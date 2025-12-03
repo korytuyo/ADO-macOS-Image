@@ -1,0 +1,9 @@
+trigger: none
+
+# Uses an explicit pool name so the discovery script must match "pool: macos-13" text.
+pool: macos-13
+
+steps:
+  - script: |
+      echo "Explicit pool string referencing macos-13"
+    displayName: 'Pool string sample'

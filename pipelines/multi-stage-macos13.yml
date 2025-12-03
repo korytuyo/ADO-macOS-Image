@@ -1,0 +1,22 @@
+trigger: none
+
+stages:
+  - stage: lint
+    displayName: 'Lint on Ubuntu'
+    jobs:
+      - job: lintJob
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: echo "Linting on Linux"
+            displayName: 'Lint'
+
+  - stage: ios
+    displayName: 'iOS build on macOS-13'
+    jobs:
+      - job: iosBuild
+        pool:
+          vmImage: 'macos-13'
+        steps:
+          - script: echo "Only this stage should trigger detection"
+            displayName: 'macOS-13 stage'
